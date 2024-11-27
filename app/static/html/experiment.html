@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Experiment</title>
+    <link rel="stylesheet" href="../css/myStyleSheet.css"/>
+    <!--    <script src="../js/about.js" defer></script>-->
+    <!--    <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"></script>-->
+</head>
+<body>
+<nav>
+    <span class="title">CSCI4511w Final Project, Shortest Path Finding on the UMN Campus Map </span>
+    <ul>
+        <li><a href="/index">Home</a></li>
+        <li><a href="/mapCampus">UMN Interactive Map</a></li>
+        <li><a href="/instruction">Instruction</a></li>
+        <li><a class="active" href="/experiment">Experiment</a></li>
+        <li><a href="/about">About</a></li>
+    </ul>
+</nav>
+<div id="exp-result">
+    <h2>Experiment Results</h2>
+    <p>
+        Test Mode: there is a loop for 100 times of shortest-path searching.
+        Results with positive memory usages are considered as 'Valid' and are counting into the averages.
+        <br>
+        Each test is tested by running the test mode 20 times and taking the averages of stats.
+        After each test on each algorithm, the browser is refreshed for the next test.
+    </p>
+    <br>
+    <div class="gold-note">GOLD: best performance.</div>
+    <div class="maroon-note">MAROON: worst performance.</div>
+    <br>
+    <h3>Test 1, Anderson Hall -> RecWell</h3>
+    <div class="exp-result-table">
+        <table>
+            <tr>
+                <th>Algorithm Name</th>
+                <th>Average Time Taken (in Milliseconds)</th>
+                <th>Average Memory Used (in Bytes)</th>
+                <th>Distance Traveled (in Kilometers)</th>
+            </tr>
+            <tr>
+                <td>A* w Manhattan</td>
+                <td>1.0418</td>
+                <td>558616.0698</td>
+                <td class="worst-mark">1.1913</td>
+            </tr>
+            <tr>
+                <td>A* w Haversine</td>
+                <td>1.1165</td>
+                <td>594555.9809</td>
+                <td class="worst-mark">1.1913</td>
+            </tr>
+            <tr>
+                <td>Breadth First Search</td>
+                <td>0.7923</td>
+                <td>293978.9895</td>
+                <td>1.1910</td>
+            </tr>
+            <tr>
+                <td>Bidirectional Search</td>
+                <td class="best-mark">0.4486</td>
+                <td class="best-mark">76089.9596</td>
+                <td class="worst-mark">1.1913</td>
+            </tr>
+            <tr>
+                <td>Dijkstra's Algorithm</td>
+                <td>1.114</td>
+                <td>447368.4596</td>
+                <td class="best-mark">1.1908</td>
+            </tr>
+            <tr>
+                <td>Bellman-Ford Algorithm</td>
+                <td class="worst-mark">231.444</td>
+                <td class="worst-mark">6046586.3467</td>
+                <td class="best-mark">1.1908</td>
+            </tr>
+        </table>
+    </div>
+    <br>
+    <h3>Test 2, Eddy Hall -> Frontier Hall</h3>
+    <div class="exp-result-table">
+        <table>
+            <tr>
+                <th>Algorithm Name</th>
+                <th>Average Time Taken (in Milliseconds)</th>
+                <th>Average Memory Used (in Bytes)</th>
+                <th>Distance Traveled (in Kilometers)</th>
+            </tr>
+            <tr>
+                <td>A* w Manhattan</td>
+                <td>1.8062</td>
+                <td>1008413.1962</td>
+                <td>1.6195</td>
+            </tr>
+            <tr>
+                <td>A* w Haversine</td>
+                <td>1.9109</td>
+                <td>1001366.4634</td>
+                <td>1.6195</td>
+            </tr>
+            <tr>
+                <td>Breadth First Search</td>
+                <td class="best-mark">1.4765</td>
+                <td>535639.0614</td>
+                <td>1.6189</td>
+            </tr>
+            <tr>
+                <td>Bidirectional Search</td>
+                <td>1.6864</td>
+                <td class="best-mark">354748.6640</td>
+                <td class="worst-mark">1.6384</td>
+            </tr>
+            <tr>
+                <td>Dijkstra's Algorithm</td>
+                <td>4.3134</td>
+                <td>1605899.5416</td>
+                <td>1.3584</td>
+            </tr>
+            <tr>
+                <td>Bellman-Ford Algorithm</td>
+                <td class="worst-mark">227.255</td>
+                <td class="worst-mark">6025441.6406056</td>
+                <td class="best-mark">1.1927</td>
+            </tr>
+        </table>
+    </div>
+    <br>
+    <h3>Test 3, Walter Library (main door) -> Boynton Health Service</h3>
+    <div class="exp-result-table">
+        <table>
+            <tr>
+                <th>Algorithm Name</th>
+                <th>Average Time Taken (in Milliseconds)</th>
+                <th>Average Memory Used (in Bytes)</th>
+                <th>Distance Traveled (in Kilometers)</th>
+            </tr>
+            <tr>
+                <td>A* w Manhattan</td>
+                <td>1.6989</td>
+                <td>993647.0386</td>
+                <td class="best-mark">0.5006</td>
+            </tr>
+            <tr>
+                <td>A* w Haversine</td>
+                <td>1.8953</td>
+                <td>1011861.2717</td>
+                <td class="best-mark">0.5006</td>
+            </tr>
+            <tr>
+                <td>Breadth First Search</td>
+                <td>1.3899</td>
+                <td>569604.8813</td>
+                <td class="best-mark">0.5006</td>
+            </tr>
+            <tr>
+                <td>Bidirectional Search</td>
+                <td class="best-mark">0.8395</td>
+                <td class="best-mark">163001.9561</td>
+                <td class="worst-mark">1.0510</td>
+            </tr>
+            <tr>
+                <td>Dijkstra's Algorithm</td>
+                <td>2.5012</td>
+                <td>992069.8953</td>
+                <td>0.5245</td>
+            </tr>
+            <tr>
+                <td>Bellman-Ford Algorithm</td>
+                <td class="worst-mark">263.6735</td>
+                <td class="worst-mark">2093191.46273081</td>
+                <td class="best-mark">0.5006</td>
+            </tr>
+        </table>
+    </div>
+</div>
+</body>
+</html>

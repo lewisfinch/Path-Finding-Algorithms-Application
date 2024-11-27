@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>UMN Map</title>
+    <link rel="stylesheet" href="../css/myStyleSheet.css"/>
+    <link href='https://api.mapbox.com/mapbox-gl-js/v2.4.1/mapbox-gl.css' rel='stylesheet'/>
+    <script src='https://api.mapbox.com/mapbox-gl-js/v2.4.1/mapbox-gl.js'></script>
+    <script src="https://unpkg.com/@mapbox/mapbox-sdk/umd/mapbox-sdk.min.js"></script>
+    <script src="../js/algorithms.js" async></script>
+    <script src="../js/map.js" async></script>
+</head>
+<body>
+<nav>
+    <span class="title">CSCI4511w Final Project, Shortest Path Finding on the UMN Campus Map </span>
+    <ul>
+        <li><a href="/index">Home</a></li>
+        <li><a class="active" href="/mapCampus">UMN Interactive Map</a></li>
+        <li><a href="/instruction">Instruction</a></li>
+        <li><a href="/experiment">Experiment</a></li>
+        <li><a href="/about">About</a></li>
+    </ul>
+</nav>
+
+<h1 class="map-title">Campus Map</h1>
+<div id="popup" class="popup hidden">
+    <p>Test Results: </p>
+</div>
+<div id="map-container">
+    <div class="route-planner">
+        <div>
+            <h1>Plan your route here!</h1>
+        </div>
+        <br>
+        <div>
+            Start:
+            <input id="start" class="name-input" type="Text" placeholder="Search address or building name">
+            <div id="start-suggestions" class="suggestion-list"></div>
+
+            <br><br>
+            Destination:
+            <input id="dest" class="name-input" type="Text" placeholder="Search address or building name">
+            <div id="dest-suggestions" class="suggestion-list"></div>
+        </div>
+        <br>
+        <div>Search Algorithm:
+            <select id="search-strategy">
+                <option value="astar_manhattan">A* Manhattan (astar_manhattan)</option>
+                <option value="astar_haversine">A* Haversine (astar_haversine)</option>
+                <option value="bfs">Breadth First Search (bfs)</option>
+                <option value="bds">Bidirectional Search (bds)</option>
+                <option value="dijkstra">Dijkstra's Algorithm (dijkstra)</option>
+                <option value="bellman_ford">Bellman-Ford Algorithm (bellman_ford)</option>
+            </select>
+        </div>
+        <div>
+            <input type="radio" id="normalMode" name="mode" value="normal" checked>
+            <label for="normalMode">Normal mode</label><br>
+            <input type="radio" id="testMode" name="mode" value="test">
+            <label for="testMode">Test mode (Only works with Google Chrome!)</label>
+        </div>
+        <div><input id="route-btn" type="button" value="Plot The Route" onclick="planRoute()"></div>
+        <div><input id="reset-btn" type="button" value="Reset" onclick="resetRoute()"></div>
+    </div>
+    <div id="map"></div>
+</div>
+<p class="map-info">(Scroll to zoom in / out the map. Click to set your markers!)</p>
+</body>
+</html>

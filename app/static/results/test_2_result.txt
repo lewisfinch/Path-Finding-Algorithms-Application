@@ -1,0 +1,26 @@
+>>>>>>>>>> Test 2, Eddy Hall -> Frontier Hall, Average of 20 Iterations <<<<<<<<<<
+>>> A* w Manhattan <<<
+Time taken: 417.81 milliseconds
+Memory used: 3906 bytes
+Distance: 0.935 meters
+
+>>> A* w Haversine <<<
+Time taken: 415.34 milliseconds
+Memory used: 0 bytes
+Distance: 0.935 meters
+
+>>> Bidirectional Search <<<
+Time taken: 410.65 milliseconds
+Memory used: 6250 bytes
+Distance: 6.772 meters
+
+>>> Breadth-First Search <<<
+Time taken: 415.78 milliseconds
+Memory used: 0 bytes
+Distance: 1.390 meters
+
+>>> Dijkstra's Algorithm <<<
+Time taken: 415.47 milliseconds
+Memory used: 1562 bytes
+Distance: 0.935 meters
+

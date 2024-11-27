@@ -1,0 +1,263 @@
+/*** Shared CSS ***/
+* {
+    margin: 0;
+    padding: 0;
+    font-family: "PT Serif", sans-serif;
+}
+
+nav {
+    margin: 0;
+    padding: 2%;
+    background-color: black;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+nav ul {
+    list-style-type: none;
+}
+
+nav li {
+    float: left;
+}
+
+nav li a {
+    margin: 0 1rem;
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    border: 1px white solid;
+}
+
+nav li a:hover {
+    background-color: #ddd;
+    color: black;
+}
+
+nav li a.active {
+    background-color: gold;
+    color: black;
+    font-weight: bolder;
+}
+
+nav .title {
+    color: white;
+    font-weight: bold;
+    margin: 1%;
+}
+
+/*** Shared CSS ***/
+
+
+/*** Home Page ***/
+.home-h2-title {
+    margin: 0 auto;
+    padding: 2%;
+    text-align: center;
+}
+
+.home-info-list {
+    text-align: left;
+    margin: 2%;
+}
+
+.home-info-list ul li {
+    list-style-type: none;
+    margin: 1%;
+    padding: 1%;
+}
+
+/*** Home Page ***/
+
+
+/*** Campus Map Page ***/
+.map-title {
+    text-align: center;
+    margin: 1%;
+}
+
+#map-container {
+    display: flex;
+    flex-direction: row;
+    height: 520px;
+}
+
+.route-planner {
+    color: white;
+    background-color: black;
+    display: flex;
+    flex-direction: column;
+    padding: 3%;
+    flex: 1;
+}
+
+.route-planner div {
+    margin: 5px;
+}
+
+#map {
+    flex: 4;
+    height: 100%;
+}
+
+.map-info {
+    margin: 1%;
+    text-align: center;
+}
+
+#start, #dest, #search-strategy {
+    width: 100%;
+}
+
+#route-btn, #reset-btn {
+    background-color: navajowhite;
+    padding: 2%;
+    width: 50%;
+    border-radius: 10px;
+}
+
+#route-btn:hover, #reset-btn:hover {
+    background-color: gold;
+}
+
+/* Suggestion List */
+.suggestion-list {
+    display: none;
+    color: black;
+    position: absolute;
+    background-color: white;
+    border: 2px solid gold;
+    z-index: 1000;
+    max-height: 100px;
+    overflow-y: auto;
+}
+
+.suggestion-item {
+    padding: 2px;
+    cursor: pointer;
+}
+
+.suggestion-item:hover {
+    background-color: lightslategray;
+}
+
+/* Suggestion List */
+
+/* Popup */
+.popup {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 2%;
+    margin: 2%;
+    background-color: gold;
+    border-radius: 0.5em;
+    box-shadow: 0 0 1em rgba(0, 0, 0, 0.5);
+    z-index: 9999;
+    opacity: 0.8;
+    transition: opacity 1s;
+}
+
+.popup.hidden {
+    opacity: 0;
+}
+
+/*** Campus Map Page ***/
+
+
+/*** Experiment Page ***/
+#exp-background {
+    background-color: azure;
+    padding: 2%;
+    width: auto;
+}
+
+#exp-background div {
+    padding: 1%;
+}
+
+.exp-padding {
+    padding-left: 3%;
+}
+
+#exp-result {
+    background-color: aliceblue;
+    padding: 2%;
+    width: auto;
+}
+
+#exp-result table {
+    text-align: center;
+    padding: 1%;
+    width: 100%;
+    border-collapse: collapse;
+    border: 1px solid black;
+}
+
+#exp-result th {
+    border: 1px solid black;
+}
+
+#exp-result td, tr {
+    padding: 3px;
+    border-right: 1px solid black;
+    border-bottom: 1px solid black;
+}
+
+#exp-result h3 {
+    padding: 3px;
+}
+
+.gold-note {
+    background-color: gold;
+    font-weight: bold;
+    width: fit-content;
+}
+
+.maroon-note {
+    margin-top: 1%;
+    color: white;
+    background-color: maroon;
+    font-weight: bold;
+    width: fit-content;
+}
+
+.best-mark {
+    background-color: gold;
+    font-weight: bold;
+}
+
+.worst-mark {
+    background-color: maroon;
+    font-weight: bold;
+    color: white;
+}
+
+/*** Experiment Page ***/
+
+
+/*** About Page ***/
+#project-description {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 1rem;
+}
+
+/*** About Page ***/
+
+
+/*** Error Page ***/
+.error-page {
+    text-align: center;
+    margin: 0 auto;
+    background-color: maroon;
+    color: gold;
+    padding: 3%;
+}
+
+/*** Error Page ***/

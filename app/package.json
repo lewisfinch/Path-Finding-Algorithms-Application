@@ -1,0 +1,14 @@
+{
+  "name": "csci-4511w-final-project",
+  "version": "1.0.0",
+  "description": "This is the Final Project, \"Shortest Path Finding on the UMN Campus map\", for the class CSCI 4511w.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "wang9747 - Junyuan Wang, zhai0041 - Yicheng Zhai",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.18.2"
+  }
+}

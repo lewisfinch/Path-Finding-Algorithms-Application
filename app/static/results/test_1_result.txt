@@ -1,0 +1,26 @@
+>>>>>>>>>> Test 1, Anderson Hall -> RecWell, Average of 20 Iterations <<<<<<<<<<
+>>> A* w Manhattan <<<
+Time taken: 416.66 milliseconds
+Memory used: 135938 bytes
+Distance: 1.388 meters
+
+>>> A* w Haversine <<<
+Time taken: 411.49 milliseconds
+Memory used: 0 bytes
+Distance: 1.388 meters
+
+>>> Bidirectional Search <<<
+Time taken: 409.25 milliseconds
+Memory used: 1562 bytes
+Distance: 3.164 meters
+
+>>> Breadth-First Search <<<
+Time taken: 411.86 milliseconds
+Memory used: 0 bytes
+Distance: 1.406 meters
+
+>>> Dijkstra's Algorithm <<<
+Time taken: 416.24 milliseconds
+Memory used: 781 bytes
+Distance: 1.388 meters
+

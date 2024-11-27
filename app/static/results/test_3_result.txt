@@ -1,0 +1,26 @@
+>>>>>>>>>> Test 3, Walter Library (main door) -> Boynton Health Service, Average of 20 Iterations <<<<<<<<<<
+>>> A* w Manhattan <<<
+Time taken: 420.31 milliseconds
+Memory used: 71875 bytes
+No path found
+
+>>> A* w Haversine <<<
+Time taken: 425.99 milliseconds
+Memory used: 8594 bytes
+No path found
+
+>>> Bidirectional Search <<<
+Time taken: 408.26 milliseconds
+Memory used: 0 bytes
+No path found
+
+>>> Breadth-First Search <<<
+Time taken: 417.03 milliseconds
+Memory used: 11719 bytes
+No path found
+
+>>> Dijkstra's Algorithm <<<
+Time taken: 419.06 milliseconds
+Memory used: 0 bytes
+No path found
+
